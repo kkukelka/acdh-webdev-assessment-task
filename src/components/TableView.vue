@@ -21,7 +21,11 @@ const props = defineProps<{
           v-for="item in data?.items"
           class="text-gray-300 bg-gray-800 border-b border-gray-500"
         >
-          <td v-for="(value, key) in item" class="px-6 py-4">
+          <td
+            v-for="(value, key) in item"
+            class="px-6 py-4"
+            :class="{ 'w-1/4': key === 'keywords' }"
+          >
             <a
               v-if="key === 'id'"
               :href="`https://mmp.acdh-dev.oeaw.ac.at/archiv/stelle/detail/${value}`"
