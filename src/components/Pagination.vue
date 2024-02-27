@@ -11,7 +11,7 @@ const emits = defineEmits(["next", "prev"]);
 
 const upperBound = computed(() => {
   let upperBound =
-    (props.currentPage - 1) * props.itemsPerPage + Number(props.itemsPerPage);
+    (props.currentPage - 1) * props.itemsPerPage + props.itemsPerPage;
   return props.totalResults <= upperBound ? props.totalResults : upperBound;
 });
 </script>

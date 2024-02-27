@@ -12,7 +12,7 @@ export function getPassages() {
         `https://mmp.acdh-dev.oeaw.ac.at/api/stelle/?zitat=${quote}&zitat_lookup=icontains&limit=${limit}&offset=${offset}`
       );
       data.value = await response.json();
-    } catch (err) {
+    } catch (err: any) {
       error.value = err;
     } finally {
       isLoading.value = false;
